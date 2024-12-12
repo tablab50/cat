@@ -1,1 +1,47 @@
-// Начните писать стили здесь
+@use "global/fonts.scss";
+@use "blocs/index-main.scss";
+@use "blocs/button.scss";
+@use "blocs/page-body.scss";
+@use "blocs/page-header.scss";
+@use "blocs/logo.scss";
+@use "blocs/main-nav.scss";
+@use "blocs/programms.scss";
+@use "blocs/greetings.scss";
+@use "blocs/how-it-works.scss";
+@use "blocs/example.scss";
+@use "blocs/adress.scss";
+@use "blocs/page-footer.scss";
+@use "blocs/socials.scss";
+@use "blocs/copyright.scss";
+
+html {
+  width: 100vw;
+
+}
+body {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  width: 100vw;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: dfdfd;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+ * {
+  box-sizing: border-box;
+
+ }
+
+

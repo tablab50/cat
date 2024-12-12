@@ -1,0 +1,50 @@
+@use "global/mixins.scss" as *;
+
+.copyright__whrapper {
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: $tablet-min-width) {
+    margin-top: 58px;
+    margin-bottom: 55px;
+  }
+}
+
+.copyright__container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @media (min-width: $tablet-min-width){
+    margin-left: auto;
+  }
+}
+
+.copyright__logo-icon {
+  width: 27px;
+  height: 34px;
+  color: #666666;
+.copyright__link:hover & {
+  color: #68B738;
+}
+
+.copyright__link:active &{
+  opacity: 0.3;
+}
+}
+
+.copyright__link{
+  display: flex;
+  align-items: center;
+}
+
+.copyright__name-icon {
+  width: 114px;
+  height: 18px;
+  margin-right: 22px;
+  .copyright__link:hover & {
+    color: #68B738;
+  }
+
+  .copyright__link:active &{
+    opacity: 0.3;
+  }
+
+}

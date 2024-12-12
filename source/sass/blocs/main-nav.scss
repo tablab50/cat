@@ -1,0 +1,144 @@
+@use "global/mixins.scss" as *;
+.main-nav__toggler {
+  width: 40px;
+  height: 45px;
+  margin:auto 0;
+  position: relative;
+  border: none;
+  background: none;
+  padding: 5px;
+  display: block;
+  cursor: pointer;
+  @media (min-width:$tablet-min-width)  {
+    display: none;
+  }
+
+}
+.main-nav--closed .main-nav__list{
+  @media(max-width: $tablet-min-width) {
+  display: none;
+}}
+.main-nav--closed .main-nav__toggler::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  box-shadow: 0 8px 0 0 black, 0 16px 0 0 black;
+}
+
+.main-nav--opened .main-nav__toggler {
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 36px;
+    height: 2px;
+    background-color:  black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color:black;
+  }
+}
+.main-nav--nojs .main-nav__toggler {
+  display: none;
+}
+ .main-nav--nojs  .main-nav__list {
+  display: block;
+  position: static;
+  min-height: 0;
+ }
+
+
+.main-nav__list {
+  @include list-zero;
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  text-decoration: none;
+  margin: 0;
+  z-index: 52;
+  min-height: 57px;
+  @media (max-width: $tablet-min-width){
+    position: absolute;
+    display: flex;
+    background-color: #FFF;
+    top: 65px;
+    left: -30px;
+    right: -30px;
+  }
+  @media (min-width: $tablet-min-width){
+    flex-direction: row;
+  }
+
+}
+.main-nav__item {
+  margin-left: 36px;
+  @media (max-width: $tablet-min-width) {
+  padding-top: 22px;
+  padding-bottom: 24px;
+  border: 1px solid #E6E6E6;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  width: 100%;
+ text-align: center;
+}
+}
+
+
+.main-nav__link {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  text-transform: uppercase;
+  position:relative;
+  @media (min-width: $tablet-min-width){
+    color: #000;
+  &--active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #68B738;
+    @media (min-width: $desktop-min-width){
+      background-color: inherit;
+    }
+  }
+}
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+    &:active{
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    @media  (min-width: $desktop-min-width)  {
+    color: #FFF;
+    font-size: 20px;
+  }
+}
+
+.main-nav__link--black a {
+  color:black;
+}

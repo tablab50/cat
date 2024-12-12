@@ -1,0 +1,66 @@
+@use "global/mixins.scss" as *;
+.adress__container {
+  position: relative;
+  background-color: $basic-grey;
+  &::before {
+    content: "";
+    display: block;
+    height: auto;
+    width: auto;
+    background-color: $basic-grey;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    right: -30px;
+    bottom: 0;
+  }
+}
+
+.adress__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 26px;
+  @media (min-width: $tablet-min-width) {
+    padding: 0 70px;
+    padding-top: 60px;
+    padding-bottom: 56px
+  }
+  @media (min-width: $desktop-min-width){
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    background-color: #fff;
+    min-width: 565px;
+    min-height: 198px;
+    padding-top: 59px;
+    padding-right: 80px;
+    padding-bottom: 56px;
+    padding-left: 80px;
+
+  }
+}
+.adress__text {
+  width: 139px;
+  margin: 0;
+  color: #111;
+  font-size: 16px;
+  text-transform: uppercase;
+  @media (min-width: $tablet-min-width) {
+  }
+}
+
+.adress__superscription {
+  color: $special_dark-grey;
+  text-align: right;
+  font-family: Arial;
+  font-size: 16px;
+  @media (min-width: $tablet-min-width) {
+  }
+
+}
+
+.adress__span {
+  margin-bottom: 20px;
+  display: block;
+}

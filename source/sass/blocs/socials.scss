@@ -1,0 +1,83 @@
+@use "global/mixins.scss" as *;
+.socials__wrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  width: 280px;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 1px;
+    width: 280px;
+    background-color: #D9D9D9;
+    @media (min-width: $tablet-min-width) {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 1px;
+    width: 280px;
+    background-color: #D9D9D9;
+    @media (min-width: $tablet-min-width) {
+      display: none;
+    }
+  }
+  @media (min-width: $tablet-min-width) {
+    margin: 0 auto;
+  }
+}
+
+.socials__vk-icon{
+  color: #666666;
+}
+
+.socials__vk-link {
+  margin-right: 36px;
+  &:hover .socials__vk-icon {
+    color: #68B738;
+  }
+  &:active .socials__vk-icon {
+    opacity: 0.6;
+  }
+}
+
+.socials__instagram-icon{
+  color:#666666
+}
+
+.socials__instagram-link {
+  margin-right: 36px;
+  &:hover .socials__instagram-icon {
+    color: #68B738;
+  }
+  &:active .socials__instagram-icon {
+    opacity: 0.6;
+  }
+}
+
+.socials__facebook-icon {
+  stroke:#666666;
+  color: transparent;
+ }
+
+.socials__facebook-link {
+  &:hover .socials__facebook-icon {
+    stroke: #68B738;
+  }
+  &:active .socials__facebook-icon {
+    opacity: 0.6;
+  }
+
+}

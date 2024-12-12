@@ -1,0 +1,154 @@
+@use "global/mixins.scss" as *;
+.greetings {
+  position: relative;
+  @media(min-width: $desktop-min-width) {
+    position: static;
+  }
+}
+.greetings__decorative-layer {
+  left: -20px;
+  right: -20px;
+  min-height: 302px;
+  position: absolute;
+  background-image: url(../img/index-background-mobile.jpg);
+  background-size: 317px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #454449;
+  &::before {
+    content: "";
+    display: block;
+    background-color:#68B738D9;
+    height: 302px;
+    position: absolute;
+    z-index: 0;
+    left: -20px;
+    right: 0;
+    @media(min-width: $desktop-min-width) {
+      width: 703px;
+      height: 694px;
+      flex-shrink: 0;
+      left:auto;
+    }}
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/index-background-mobile@2.jpg);
+    background-size: 317px auto;
+  }
+  @media (min-width: $tablet-min-width) {
+    display: none;
+  }
+  @media(min-width: $desktop-min-width) {
+    display: block;
+    top: 0;
+    right: -20px;
+    left:auto;
+    z-index: -1;
+    width: 703px;
+    height: 694px;
+    background-image: url(../img/index-background-desktop@1.jpg);
+    background-position: right;
+    background-size: auto;
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/index-background-desktop@2.jpg);
+      background-size:cover
+    }
+
+  }
+}
+
+
+.greetings__title {
+  text-align: center;
+  font-family: Oswald;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  @media (min-width: $tablet-min-width) {
+    color:#000;
+    font-size: 60px;
+    text-align: left;
+    margin-left: 117px;
+  }
+  @media (min-width: $desktop-min-width) {
+      text-align: left;
+      margin-left: 204px;
+      position: relative;
+      z-index: 3;
+      margin-top: 111px;
+
+  }
+}
+.greetings__subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 25px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 300px;
+  @media (min-width: $tablet-min-width) {
+    color: #000;
+    text-align: left;
+    margin-bottom: 52px;
+    margin-left: 117px;
+  }
+  @media (min-width: $desktop-min-width) {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 204px;
+  }
+}
+
+.greetings__pic {
+  width: 280px;
+  height: 270px;
+  position:absolute;
+  background: url(../img/index-can-mobile@1.png);
+  background-repeat: no-repeat;
+  top: 167px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 0;
+  @media (min-resolution: 2dppx) {
+    background: url(../img/index-can-mobile@2.png);
+    background-size: cover;
+  }
+  @media (min-width: $tablet-min-width) {
+    background-image: url(../img/index-can-tablet@1.jpg);
+    width: 709px;
+    height: 609px;
+    @media (min-resolution: 2dppx) {
+      background: url(../img/index-can-tablet@2.jpg);
+      background-size: cover;
+    }
+
+  }
+  @media (min-width: $desktop-min-width) {
+    width: 552px;
+    height: 499px;
+    transform: none;
+    left: auto;
+    background: url(../img/index-can.png);
+    background-repeat: no-repeat;
+    top: 145px;
+    left: 572px;
+    transform: none;
+    right: 316px;
+    @media (min-resolution: 2dppx) {
+      background: url(../img/index-can@2.png);
+      background-size: cover;
+    }
+
+
+  }
+}
+
+
+

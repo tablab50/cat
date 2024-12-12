@@ -1,0 +1,27 @@
+@use "global/mixins.scss" as *;
+
+.logo {
+  text-decoration: none;
+ &:hover{
+  opacity: 0.8;
+ }
+ &:active {
+  opacity: 0.6;
+ }
+}
+
+.logo__name {
+  @include centerer;
+  left: 53%;
+  margin: 0;
+  color:black;
+  @media (min-width: $tablet-min-width) {
+    display: none;
+  }
+}
+
+.logo__image {
+  display: block;
+  margin-right: 12px;
+}
+

@@ -1,0 +1,35 @@
+@use "global/mixins.scss" as *;
+.page-footer__wrapper {
+  background-color: $basic-grey;
+  padding: 0 20px;
+  border-top: 1px solid transparent;
+
+  @media (min-width: $tablet-min-width) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  @media (min-width: $tablet-min-width){
+    padding: 0 30px;
+  }
+}
+
+
+.page-footer__logo-link {
+  display: block;
+  width: 128px;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  @media (max-width: $tablet-min-width){
+    margin: 0 auto;
+    margin-top: 39px;
+    margin-bottom: 32px;
+  }
+  @media (min-width: $tablet-min-width){
+    width: 128px;
+    height: 24px;
+    margin-right: auto;
+  }
+}
+
+
