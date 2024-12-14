@@ -1,0 +1,32 @@
+@use "global/mixins.scss" as *;
+.form-main {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 27px;
+  padding-bottom: 32px;
+  @media (min-width: $tablet-min-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 40px;
+    padding-bottom: 72px;
+  }
+  @media (min-width: $tablet-min-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 20px;
+    padding-bottom: 72px;
+  }
+}
+.form-main__page-title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 37px;
+  @media (min-width: $tablet-min-width){
+    margin-bottom: 54px;
+  }
+  @media (min-width: $desktop-min-width) {
+    margin-bottom: 56px;
+  }
+}
