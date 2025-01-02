@@ -1,0 +1,137 @@
+@use "global/mixins.scss" as *;
+.additional-catalog {
+  padding-bottom: 72px;
+}
+
+.additional-catalog__title {
+  font-family: Oswald;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  margin-bottom: 36px;
+  &::after {
+    content: "";
+    display: block;
+    width: auto;
+    height: 2px;
+    background: #68B738;
+    position: absolute;
+    left: 267px;
+    right: -20px;
+    top: 16px;
+    }
+}
+
+.additional-catalog__list {
+  @include list-zero;
+  @media (min-width: $desktop-min-width) {
+    margin-right: 435px;
+  }
+}
+
+.additional-catalog__item {
+  border-top:1px solid #CDCDCD;
+  padding-bottom: 20px;
+  @media (min-width: $tablet-min-width) {
+    border: 1px solid #CDCDCD;
+    padding: 28px 38px;
+  }
+  @media (min-width: $desktop-min-width) {
+    display: flex;
+    border:none;
+    border-top: 1px solid #CDCDCD;
+    border-bottom: 1px solid #CDCDCD;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 25px 0;
+    height: 70px;
+  }
+}
+
+.additional-catalog__description-list {
+position: relative;
+padding-top: 13px;
+margin: 0;
+@media (min-width: $tablet-min-width) {
+  padding: 0;
+}
+@media (min-width: $desktop-min-width) {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+}
+
+.additional-catalog__product-name {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  @media (min-width: $tablet-min-width) {
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  @media (min-width: $desktop-min-width) {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.additional-catalog__whrapper-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  @media (min-width: $tablet-min-width) {
+    position: absolute;
+    top: 4px;
+    right: 0;
+  }
+  @media (min-width: $desktop-min-width) {
+    position: static;
+    margin: 0;
+    align-items: center;
+    margin-right: 38px;
+    margin-left: auto;
+    width: 288px;
+    justify-content: space-between;
+    }
+}
+
+.additional-catalog__whrapper-line dd {
+  color: $special_dark-grey;
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.additional-catalog__volume {
+  margin: 0;
+  @media (min-width: $tablet-min-width) {
+    margin-right: 50px;
+  }
+  @media (min-width: $desktop-min-width) {
+    margin: 0;
+  }
+}
+
+.additional-catalog__price {
+  margin: 0;
+}
+
+.additional-catalog__order-button {
+  margin: 0;
+  width: 100%;
+  @media (min-width: $desktop-min-width) {
+    width: 244px;
+    margin-left: auto;
+    align-self: center;
+  }
+}

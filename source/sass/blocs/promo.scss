@@ -1,0 +1,73 @@
+@use "global/mixins.scss" as *;
+.promo {
+  padding-bottom: 35px;
+  position: relative;
+  @media (min-width:$desktop-min-width) {
+    padding: 0;
+  }
+}
+
+.promo__box {
+  background: rgba(104, 183, 56, 0.85);
+  width: 280px;
+  height: 291px;
+  position: relative;
+  margin: auto;
+  border: 1px solid transparent;
+  @media (min-width: $tablet-min-width) {
+    display: flex;
+    width: 707px;
+    height: 201px;
+    align-items: center;
+  }
+  @media (min-width: $desktop-min-width) {
+    width: 244.991px;
+    height: 288.773px;
+    z-index: 0;
+    position: absolute;
+    top: -375px;
+    right: 110px
+  }
+
+  &::before {
+    content: "";
+    display:block;
+    width: 280px;
+    height: 289.881px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../../img/promo.jpg);
+    z-index: -1;
+    @media (min-width: $tablet-min-width) {
+      width: 707px;
+      height: 200px;
+      background-image: url(../../img/promo-tablet.jpg);
+    }
+    @media (min-width: $desktop-min-width) {
+      width: 244.991px;
+      height: 288.773px;
+      background-image: url(../../img/promo-desktop.jpg);
+    }
+  }
+}
+
+.promo__icon {
+  display: block                                      ;
+  margin: 0 auto;
+  margin-top: 59px;
+  margin-bottom: 48px;
+  @media (min-width: $tablet-min-width) {
+    margin: auto 0;
+    margin-left: 77px;
+    margin-right: 265px;
+  }
+}
+
+.promo__text {
+  text-align: center;
+  color: #FFF;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 20px;
+}

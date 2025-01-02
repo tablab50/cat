@@ -1,0 +1,19 @@
+@use "global/mixins.scss" as *;
+.catalog-main {
+  padding: 0 20px;
+  padding-top: 27px;
+  @media (min-width: $tablet-min-width){
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px; 
+
+  }
+}
+
+.catalog-main__title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}

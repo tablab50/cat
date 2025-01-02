@@ -15,6 +15,10 @@
 @use "blocs/form.scss";
 @use "blocs/copyright.scss";
 @use "blocs/form-main.scss";
+@use "blocs/catalog-main.scss";
+@use "blocs/catalog.scss";
+@use "blocs/additional-catalog.scss";
+@use "blocs/promo.scss";
 
 html {
   width: 100vw;
